@@ -1,8 +1,11 @@
 {
   "recommendations": [
     "ms-vsliveshare.vsliveshare",
+    "christian-kohler.npm-intellisense",
     "esbenp.prettier-vscode",
     "johnsoncodehk.volar",
-    "arcanis.vscode-zipfs"
+    "johnsoncodehk.vscode-typescript-vue-plugin",
+    "arcanis.vscode-zipfs",
+    "wayou.vscode-todo-highlight"
   ]
 }
