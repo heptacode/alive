@@ -3,10 +3,8 @@ import { defineConfig } from 'vite';
 import { createVuePlugin } from 'vite-plugin-vue2';
 import viteComponents, { VuetifyResolver } from 'vite-plugin-components';
 
+// https://vitejs.dev/config
 export default defineConfig({
-  build: {
-    outDir: resolve(__dirname, 'build'),
-  },
   define: {
     'process.env': process.env,
   },
