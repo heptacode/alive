@@ -5,6 +5,7 @@
     "module": "esnext",
     "jsx": "preserve",
     "moduleResolution": "node",
+    "noImplicitAny": false,
     "experimentalDecorators": true,
     "skipLibCheck": true,
     "esModuleInterop": true,

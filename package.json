@@ -7,6 +7,7 @@
     "build": "vite build"
   },
   "dependencies": {
+    "@fawmi/vue-google-maps": "^0.9.67",
     "axios": "latest",
     "vue": "legacy",
     "vue-class-component": "latest",
@@ -24,7 +25,7 @@
     "typescript": "latest",
     "vite": "latest",
     "vite-plugin-components": "latest",
-    "vite-plugin-pwa": "^0.12.0",
+    "vite-plugin-pwa": "latest",
     "vite-plugin-vue2": "latest",
     "vue-template-compiler": "latest"
   },
