@@ -4,25 +4,16 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
 
-node_modules
+# Project
 dist
-dist-ssr
+.env
 *.local
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# MacOS
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
 
+# Packages
 .yarn/*
 !.yarn/cache
 !.yarn/patches
@@ -30,3 +21,4 @@ dist-ssr
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+node_modules
