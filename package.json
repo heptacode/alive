@@ -7,14 +7,16 @@
     "build": "vite build"
   },
   "dependencies": {
-    "@fawmi/vue-google-maps": "^0.9.67",
     "axios": "latest",
+    "chart.js": "latest",
     "vue": "legacy",
+    "vue-chartjs": "3.5.1",
     "vue-class-component": "latest",
     "vue-property-decorator": "latest",
     "vue-router": "^3.5.2",
     "vuetify": "latest",
-    "vuex": "^3.6.2"
+    "vuex": "^3.6.2",
+    "x5-gmaps": "^0.6.0"
   },
   "devDependencies": {
     "@mdi/js": "latest",

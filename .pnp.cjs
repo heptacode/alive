@@ -33,11 +33,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
-            ["@fawmi/vue-google-maps", "npm:0.9.67"],\
             ["@mdi/js", "npm:6.6.96"],\
             ["@types/node", "npm:17.0.25"],\
             ["@vue/runtime-dom", "npm:3.2.33"],\
             ["axios", "npm:0.26.1"],\
+            ["chart.js", "npm:3.7.1"],\
             ["prettier", "npm:2.6.2"],\
             ["sass", "npm:1.32.13"],\
             ["typescript", "patch:typescript@npm%3A4.6.3#~builtin<compat/typescript>::version=4.6.3&hash=bda367"],\
@@ -46,12 +46,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["vite-plugin-pwa", "virtual:0460f86c7587ee75dac643681550c044e8047ba46e219a5baac054fc0fea2d0af97a9bd3fe4b22de0884797215e0a1a4368bb60f9ef7087a69c4008789f4e032#npm:0.12.0"],\
             ["vite-plugin-vue2", "virtual:0460f86c7587ee75dac643681550c044e8047ba46e219a5baac054fc0fea2d0af97a9bd3fe4b22de0884797215e0a1a4368bb60f9ef7087a69c4008789f4e032#npm:1.9.3"],\
             ["vue", "npm:2.6.14"],\
+            ["vue-chartjs", "virtual:0460f86c7587ee75dac643681550c044e8047ba46e219a5baac054fc0fea2d0af97a9bd3fe4b22de0884797215e0a1a4368bb60f9ef7087a69c4008789f4e032#npm:3.5.1"],\
             ["vue-class-component", "virtual:0460f86c7587ee75dac643681550c044e8047ba46e219a5baac054fc0fea2d0af97a9bd3fe4b22de0884797215e0a1a4368bb60f9ef7087a69c4008789f4e032#npm:7.2.6"],\
             ["vue-property-decorator", "virtual:0460f86c7587ee75dac643681550c044e8047ba46e219a5baac054fc0fea2d0af97a9bd3fe4b22de0884797215e0a1a4368bb60f9ef7087a69c4008789f4e032#npm:9.1.2"],\
             ["vue-router", "npm:3.5.3"],\
             ["vue-template-compiler", "npm:2.6.14"],\
             ["vuetify", "virtual:0460f86c7587ee75dac643681550c044e8047ba46e219a5baac054fc0fea2d0af97a9bd3fe4b22de0884797215e0a1a4368bb60f9ef7087a69c4008789f4e032#npm:2.6.4"],\
-            ["vuex", "virtual:0460f86c7587ee75dac643681550c044e8047ba46e219a5baac054fc0fea2d0af97a9bd3fe4b22de0884797215e0a1a4368bb60f9ef7087a69c4008789f4e032#npm:3.6.2"]\
+            ["vuex", "virtual:0460f86c7587ee75dac643681550c044e8047ba46e219a5baac054fc0fea2d0af97a9bd3fe4b22de0884797215e0a1a4368bb60f9ef7087a69c4008789f4e032#npm:3.6.2"],\
+            ["x5-gmaps", "virtual:0460f86c7587ee75dac643681550c044e8047ba46e219a5baac054fc0fea2d0af97a9bd3fe4b22de0884797215e0a1a4368bb60f9ef7087a69c4008789f4e032#npm:0.6.0"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -2291,30 +2293,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["@fawmi/vue-google-maps", [\
-        ["npm:0.9.67", {\
-          "packageLocation": "./.yarn/cache/@fawmi-vue-google-maps-npm-0.9.67-010eafef4b-4bf15feef3.zip/node_modules/@fawmi/vue-google-maps/",\
-          "packageDependencies": [\
-            ["@fawmi/vue-google-maps", "npm:0.9.67"],\
-            ["@googlemaps/markerclustererplus", "npm:1.2.10"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["@gar/promisify", [\
         ["npm:1.1.3", {\
           "packageLocation": "./.yarn/cache/@gar-promisify-npm-1.1.3-ac1a325862-4059f790e2.zip/node_modules/@gar/promisify/",\
           "packageDependencies": [\
             ["@gar/promisify", "npm:1.1.3"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@googlemaps/markerclustererplus", [\
-        ["npm:1.2.10", {\
-          "packageLocation": "./.yarn/cache/@googlemaps-markerclustererplus-npm-1.2.10-c63ffabbc3-14e882db8c.zip/node_modules/@googlemaps/markerclustererplus/",\
-          "packageDependencies": [\
-            ["@googlemaps/markerclustererplus", "npm:1.2.10"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2542,6 +2525,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@tootallnate-once-npm-2.0.0-e36cf4f140-ad87447820.zip/node_modules/@tootallnate/once/",\
           "packageDependencies": [\
             ["@tootallnate/once", "npm:2.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/chart.js", [\
+        ["npm:2.9.37", {\
+          "packageLocation": "./.yarn/cache/@types-chart.js-npm-2.9.37-b6ebfac7e0-5626a8cc3b.zip/node_modules/@types/chart.js/",\
+          "packageDependencies": [\
+            ["@types/chart.js", "npm:2.9.37"],\
+            ["moment", "npm:2.29.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2962,11 +2955,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["app", "workspace:."],\
-            ["@fawmi/vue-google-maps", "npm:0.9.67"],\
             ["@mdi/js", "npm:6.6.96"],\
             ["@types/node", "npm:17.0.25"],\
             ["@vue/runtime-dom", "npm:3.2.33"],\
             ["axios", "npm:0.26.1"],\
+            ["chart.js", "npm:3.7.1"],\
             ["prettier", "npm:2.6.2"],\
             ["sass", "npm:1.32.13"],\
             ["typescript", "patch:typescript@npm%3A4.6.3#~builtin<compat/typescript>::version=4.6.3&hash=bda367"],\
@@ -2975,12 +2968,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["vite-plugin-pwa", "virtual:0460f86c7587ee75dac643681550c044e8047ba46e219a5baac054fc0fea2d0af97a9bd3fe4b22de0884797215e0a1a4368bb60f9ef7087a69c4008789f4e032#npm:0.12.0"],\
             ["vite-plugin-vue2", "virtual:0460f86c7587ee75dac643681550c044e8047ba46e219a5baac054fc0fea2d0af97a9bd3fe4b22de0884797215e0a1a4368bb60f9ef7087a69c4008789f4e032#npm:1.9.3"],\
             ["vue", "npm:2.6.14"],\
+            ["vue-chartjs", "virtual:0460f86c7587ee75dac643681550c044e8047ba46e219a5baac054fc0fea2d0af97a9bd3fe4b22de0884797215e0a1a4368bb60f9ef7087a69c4008789f4e032#npm:3.5.1"],\
             ["vue-class-component", "virtual:0460f86c7587ee75dac643681550c044e8047ba46e219a5baac054fc0fea2d0af97a9bd3fe4b22de0884797215e0a1a4368bb60f9ef7087a69c4008789f4e032#npm:7.2.6"],\
             ["vue-property-decorator", "virtual:0460f86c7587ee75dac643681550c044e8047ba46e219a5baac054fc0fea2d0af97a9bd3fe4b22de0884797215e0a1a4368bb60f9ef7087a69c4008789f4e032#npm:9.1.2"],\
             ["vue-router", "npm:3.5.3"],\
             ["vue-template-compiler", "npm:2.6.14"],\
             ["vuetify", "virtual:0460f86c7587ee75dac643681550c044e8047ba46e219a5baac054fc0fea2d0af97a9bd3fe4b22de0884797215e0a1a4368bb60f9ef7087a69c4008789f4e032#npm:2.6.4"],\
-            ["vuex", "virtual:0460f86c7587ee75dac643681550c044e8047ba46e219a5baac054fc0fea2d0af97a9bd3fe4b22de0884797215e0a1a4368bb60f9ef7087a69c4008789f4e032#npm:3.6.2"]\
+            ["vuex", "virtual:0460f86c7587ee75dac643681550c044e8047ba46e219a5baac054fc0fea2d0af97a9bd3fe4b22de0884797215e0a1a4368bb60f9ef7087a69c4008789f4e032#npm:3.6.2"],\
+            ["x5-gmaps", "virtual:0460f86c7587ee75dac643681550c044e8047ba46e219a5baac054fc0fea2d0af97a9bd3fe4b22de0884797215e0a1a4368bb60f9ef7087a69c4008789f4e032#npm:0.6.0"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -3285,6 +3280,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/charcodes-npm-0.2.0-bb93ba6b42-972443ed35.zip/node_modules/charcodes/",\
           "packageDependencies": [\
             ["charcodes", "npm:0.2.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["chart.js", [\
+        ["npm:3.7.1", {\
+          "packageLocation": "./.yarn/cache/chart.js-npm-3.7.1-d41a8d2375-f9d118d3b7.zip/node_modules/chart.js/",\
+          "packageDependencies": [\
+            ["chart.js", "npm:3.7.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5388,6 +5392,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["moment", [\
+        ["npm:2.29.3", {\
+          "packageLocation": "./.yarn/cache/moment-npm-2.29.3-fe4ba99bae-2e780e36d9.zip/node_modules/moment/",\
+          "packageDependencies": [\
+            ["moment", "npm:2.29.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["ms", [\
         ["npm:2.1.2", {\
           "packageLocation": "./.yarn/cache/ms-npm-2.1.2-ec0c1512ff-673cdb2c31.zip/node_modules/ms/",\
@@ -6614,6 +6627,27 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["vue-chartjs", [\
+        ["npm:3.5.1", {\
+          "packageLocation": "./.yarn/cache/vue-chartjs-npm-3.5.1-2c41b4eea7-02c8690fce.zip/node_modules/vue-chartjs/",\
+          "packageDependencies": [\
+            ["vue-chartjs", "npm:3.5.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:0460f86c7587ee75dac643681550c044e8047ba46e219a5baac054fc0fea2d0af97a9bd3fe4b22de0884797215e0a1a4368bb60f9ef7087a69c4008789f4e032#npm:3.5.1", {\
+          "packageLocation": "./.yarn/__virtual__/vue-chartjs-virtual-ed96c4dde9/0/cache/vue-chartjs-npm-3.5.1-2c41b4eea7-02c8690fce.zip/node_modules/vue-chartjs/",\
+          "packageDependencies": [\
+            ["vue-chartjs", "virtual:0460f86c7587ee75dac643681550c044e8047ba46e219a5baac054fc0fea2d0af97a9bd3fe4b22de0884797215e0a1a4368bb60f9ef7087a69c4008789f4e032#npm:3.5.1"],\
+            ["@types/chart.js", "npm:2.9.37"],\
+            ["chart.js", "npm:3.7.1"]\
+          ],\
+          "packagePeers": [\
+            "chart.js"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["vue-class-component", [\
         ["npm:7.2.6", {\
           "packageLocation": "./.yarn/cache/vue-class-component-npm-7.2.6-f39b9897b6-3b4e1de032.zip/node_modules/vue-class-component/",\
@@ -6652,6 +6686,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/vue-class-component", null],\
             ["vue", "npm:2.6.14"],\
             ["vue-class-component", "virtual:0460f86c7587ee75dac643681550c044e8047ba46e219a5baac054fc0fea2d0af97a9bd3fe4b22de0884797215e0a1a4368bb60f9ef7087a69c4008789f4e032#npm:7.2.6"]\
+          ],\
+          "packagePeers": [\
+            "@types/vue-class-component",\
+            "@types/vue",\
+            "vue-class-component",\
+            "vue"\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["virtual:8deebf4dc4e42c8292eb94e974fe0ede53cecd0c9485be49ebe54c97a8aa8cbc618b42841890f386e6c684de7cb71f1569143294dc394390445adc02ed517bf3#npm:9.1.2", {\
+          "packageLocation": "./.yarn/__virtual__/vue-property-decorator-virtual-49c2b3bd3f/0/cache/vue-property-decorator-npm-9.1.2-1009a74ddb-0155127c3e.zip/node_modules/vue-property-decorator/",\
+          "packageDependencies": [\
+            ["vue-property-decorator", "virtual:8deebf4dc4e42c8292eb94e974fe0ede53cecd0c9485be49ebe54c97a8aa8cbc618b42841890f386e6c684de7cb71f1569143294dc394390445adc02ed517bf3#npm:9.1.2"],\
+            ["@types/vue", null],\
+            ["@types/vue-class-component", null],\
+            ["vue", "npm:2.6.14"],\
+            ["vue-class-component", null]\
           ],\
           "packagePeers": [\
             "@types/vue-class-component",\
@@ -7003,6 +7054,29 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/wrappy-npm-1.0.2-916de4d4b3-159da4805f.zip/node_modules/wrappy/",\
           "packageDependencies": [\
             ["wrappy", "npm:1.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["x5-gmaps", [\
+        ["npm:0.6.0", {\
+          "packageLocation": "./.yarn/cache/x5-gmaps-npm-0.6.0-bbd8517866-de9fae08e4.zip/node_modules/x5-gmaps/",\
+          "packageDependencies": [\
+            ["x5-gmaps", "npm:0.6.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:0460f86c7587ee75dac643681550c044e8047ba46e219a5baac054fc0fea2d0af97a9bd3fe4b22de0884797215e0a1a4368bb60f9ef7087a69c4008789f4e032#npm:0.6.0", {\
+          "packageLocation": "./.yarn/__virtual__/x5-gmaps-virtual-8deebf4dc4/0/cache/x5-gmaps-npm-0.6.0-bbd8517866-de9fae08e4.zip/node_modules/x5-gmaps/",\
+          "packageDependencies": [\
+            ["x5-gmaps", "virtual:0460f86c7587ee75dac643681550c044e8047ba46e219a5baac054fc0fea2d0af97a9bd3fe4b22de0884797215e0a1a4368bb60f9ef7087a69c4008789f4e032#npm:0.6.0"],\
+            ["@types/vue", null],\
+            ["vue", "npm:2.6.14"],\
+            ["vue-property-decorator", "virtual:8deebf4dc4e42c8292eb94e974fe0ede53cecd0c9485be49ebe54c97a8aa8cbc618b42841890f386e6c684de7cb71f1569143294dc394390445adc02ed517bf3#npm:9.1.2"]\
+          ],\
+          "packagePeers": [\
+            "@types/vue",\
+            "vue"\
           ],\
           "linkType": "HARD"\
         }]\

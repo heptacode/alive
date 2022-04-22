@@ -3,7 +3,7 @@
     <v-layout>
       <Sidebar />
       <v-layout column>
-        <Topbar />
+        <!-- <Topbar /> -->
         <v-main class="grey lighten-3">
           <router-view class="grey lighten-3" />
         </v-main>

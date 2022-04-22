@@ -1305,26 +1305,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fawmi/vue-google-maps@npm:^0.9.67":
-  version: 0.9.67
-  resolution: "@fawmi/vue-google-maps@npm:0.9.67"
-  dependencies:
-    "@googlemaps/markerclustererplus": ^1.2.10
-  checksum: 4bf15feef383139e64357bc51bd3133bdfcf71b357be61d3ad3cdd2e2e1f783009abab4257955fe280ae0d7c1cd4945202b28b8092519ba23871085336b40577
-  languageName: node
-  linkType: hard
-
 "@gar/promisify@npm:^1.1.3":
   version: 1.1.3
   resolution: "@gar/promisify@npm:1.1.3"
   checksum: 4059f790e2d07bf3c3ff3e0fec0daa8144fe35c1f6e0111c9921bd32106adaa97a4ab096ad7dab1e28ee6a9060083c4d1a4ada42a7f5f3f7a96b8812e2b757c1
-  languageName: node
-  linkType: hard
-
-"@googlemaps/markerclustererplus@npm:^1.2.10":
-  version: 1.2.10
-  resolution: "@googlemaps/markerclustererplus@npm:1.2.10"
-  checksum: 14e882db8cffbae057abc58a4db0467172e74b96b09cf564b295911f8406c336780b2628311d58d736e59e11fe9a17d8a5ce5660a445bf8d76015bf18cdfc732
   languageName: node
   linkType: hard
 
@@ -1490,6 +1474,15 @@ __metadata:
   version: 2.0.0
   resolution: "@tootallnate/once@npm:2.0.0"
   checksum: ad87447820dd3f24825d2d947ebc03072b20a42bfc96cbafec16bff8bbda6c1a81fcb0be56d5b21968560c5359a0af4038a68ba150c3e1694fe4c109a063bed8
+  languageName: node
+  linkType: hard
+
+"@types/chart.js@npm:^2.7.55":
+  version: 2.9.37
+  resolution: "@types/chart.js@npm:2.9.37"
+  dependencies:
+    moment: ^2.10.2
+  checksum: 5626a8cc3b410c9f2668ee7efd5b1b408f7de814608f83f9fdb349f59e3c7f5eb7199e73b41e6634c24b4ccb8d3846b290264df8d4224d184f63b095f82cfb94
   languageName: node
   linkType: hard
 
@@ -1791,11 +1784,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "app@workspace:."
   dependencies:
-    "@fawmi/vue-google-maps": ^0.9.67
     "@mdi/js": latest
     "@types/node": latest
     "@vue/runtime-dom": latest
     axios: latest
+    chart.js: latest
     prettier: latest
     sass: ~1.32.13
     typescript: latest
@@ -1804,12 +1797,14 @@ __metadata:
     vite-plugin-pwa: latest
     vite-plugin-vue2: latest
     vue: legacy
+    vue-chartjs: 3.5.1
     vue-class-component: latest
     vue-property-decorator: latest
     vue-router: ^3.5.2
     vue-template-compiler: latest
     vuetify: latest
     vuex: ^3.6.2
+    x5-gmaps: ^0.6.0
   languageName: unknown
   linkType: soft
 
@@ -2051,6 +2046,13 @@ axios@latest:
   version: 0.2.0
   resolution: "charcodes@npm:0.2.0"
   checksum: 972443ed359d54382e721b9db0a298eb95c4c454386f7e98886586f433e1e6686225416114e6f6bb2e6ef3facc9ba3b4ab9946a56a180fe64ef67816a05d4fe4
+  languageName: node
+  linkType: hard
+
+"chart.js@npm:latest":
+  version: 3.7.1
+  resolution: "chart.js@npm:3.7.1"
+  checksum: f9d118d3b7dd3c36b6da7a8d71ac9e5d9673b81095cc66c3f61ff91674e20020c6700f8c9c6f93713fa8474eb471ded106114346ccc6afa88b4a7d0eb73dcea4
   languageName: node
   linkType: hard
 
@@ -3531,6 +3533,13 @@ axios@latest:
   languageName: node
   linkType: hard
 
+"moment@npm:^2.10.2":
+  version: 2.29.3
+  resolution: "moment@npm:2.29.3"
+  checksum: 2e780e36d9a1823c08a1b6313cbb08bd01ecbb2a9062095820a34f42c878991ccba53abaa6abb103fd5c01e763724f295162a8c50b7e95b4f1c992ef0772d3f0
+  languageName: node
+  linkType: hard
+
 "ms@npm:2.1.2":
   version: 2.1.2
   resolution: "ms@npm:2.1.2"
@@ -4594,6 +4603,17 @@ vite@latest:
   languageName: node
   linkType: hard
 
+"vue-chartjs@npm:3.5.1":
+  version: 3.5.1
+  resolution: "vue-chartjs@npm:3.5.1"
+  dependencies:
+    "@types/chart.js": ^2.7.55
+  peerDependencies:
+    chart.js: ">= 2.5"
+  checksum: 02c8690fce12bb66d81329e05c71487a72de7e7309344016afa1de77e6ae3b4260500d42a840696ab05236f68c8ec91412a99b740698e8922d3c91ca030518ed
+  languageName: node
+  linkType: hard
+
 vue-class-component@latest:
   version: 7.2.6
   resolution: "vue-class-component@npm:7.2.6"
@@ -4603,7 +4623,7 @@ vue-class-component@latest:
   languageName: node
   linkType: hard
 
-vue-property-decorator@latest:
+"vue-property-decorator@latest, vue-property-decorator@npm:^9.1.2":
   version: 9.1.2
   resolution: "vue-property-decorator@npm:9.1.2"
   peerDependencies:
@@ -4907,6 +4927,17 @@ vuetify@latest:
   version: 1.0.2
   resolution: "wrappy@npm:1.0.2"
   checksum: 159da4805f7e84a3d003d8841557196034155008f817172d4e986bd591f74aa82aa7db55929a54222309e01079a65a92a9e6414da5a6aa4b01ee44a511ac3ee5
+  languageName: node
+  linkType: hard
+
+"x5-gmaps@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "x5-gmaps@npm:0.6.0"
+  dependencies:
+    vue-property-decorator: ^9.1.2
+  peerDependencies:
+    vue: ^2.6.11
+  checksum: de9fae08e4a329eed3a1c2422886a348ef13565ed46c0031fb30902c663dba30e47da8d2a28f107546151286b08b3f366c573ce26031aa01599beda6b87c5957
   languageName: node
   linkType: hard
 
