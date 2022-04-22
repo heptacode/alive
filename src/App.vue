@@ -15,7 +15,7 @@ import TopBar from '@/components/TopBar.vue';
 export default class App extends Vue {}
 </script>
 
-<style>
+<style lang="scss">
 * {
   word-break: break-word;
 }
