@@ -4,8 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "watch": "tsc -w --noEmit",
-    "build": "tsc --noEmit && vite build"
+    "build": "vite build"
   },
   "dependencies": {
     "axios": "^0.24.0",
