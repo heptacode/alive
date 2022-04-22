@@ -11,6 +11,7 @@
 - Vuex
 - SCSS
 - Vuetify 2
+- PWA
 
 ## Installation
 
