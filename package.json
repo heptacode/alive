@@ -28,7 +28,6 @@
     "typescript": "latest",
     "vite": "latest",
     "vite-plugin-components": "latest",
-    "vite-plugin-pwa": "latest",
     "vite-plugin-vue2": "latest",
     "vue-template-compiler": "latest"
   },
