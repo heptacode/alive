@@ -45,7 +45,7 @@
           <v-divider></v-divider>
 
           <div v-for="(article, index) in trendingDatasets[selectedIndex].war.articles" :key="index">
-            <v-list-item>
+            <v-list-item link>
               <v-list-item-content @click="openArticle(article.articleURL)">
                 <v-list-item-title>{{ article.title }}</v-list-item-title>
               </v-list-item-content>
