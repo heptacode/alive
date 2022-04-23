@@ -266,6 +266,7 @@ export const protestDatasets: ProtestDataset[] = [
     ],
     datasets: [
       {
+        label: '',
         data: [1000, 1500, 1500, 299, 3000, 299, 701],
         borderColor: 'rgb(255, 99, 132)',
         backgroundColor: 'rgba(255, 99, 132, 0.5)',
