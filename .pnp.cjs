@@ -37,7 +37,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:17.0.25"],\
             ["@vue/runtime-dom", "npm:3.2.33"],\
             ["axios", "npm:0.26.1"],\
-            ["chart.js", "npm:3.7.1"],\
+            ["chart.js", "npm:2.9.4"],\
             ["prettier", "npm:2.6.2"],\
             ["sass", "npm:1.32.13"],\
             ["typescript", "patch:typescript@npm%3A4.6.3#~builtin<compat/typescript>::version=4.6.3&hash=bda367"],\
@@ -2959,7 +2959,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:17.0.25"],\
             ["@vue/runtime-dom", "npm:3.2.33"],\
             ["axios", "npm:0.26.1"],\
-            ["chart.js", "npm:3.7.1"],\
+            ["chart.js", "npm:2.9.4"],\
             ["prettier", "npm:2.6.2"],\
             ["sass", "npm:1.32.13"],\
             ["typescript", "patch:typescript@npm%3A4.6.3#~builtin<compat/typescript>::version=4.6.3&hash=bda367"],\
@@ -3285,10 +3285,33 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["chart.js", [\
-        ["npm:3.7.1", {\
-          "packageLocation": "./.yarn/cache/chart.js-npm-3.7.1-d41a8d2375-f9d118d3b7.zip/node_modules/chart.js/",\
+        ["npm:2.9.4", {\
+          "packageLocation": "./.yarn/cache/chart.js-npm-2.9.4-ab62c3c6f4-cbdc7abe2f.zip/node_modules/chart.js/",\
           "packageDependencies": [\
-            ["chart.js", "npm:3.7.1"]\
+            ["chart.js", "npm:2.9.4"],\
+            ["chartjs-color", "npm:2.4.1"],\
+            ["moment", "npm:2.29.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["chartjs-color", [\
+        ["npm:2.4.1", {\
+          "packageLocation": "./.yarn/cache/chartjs-color-npm-2.4.1-c16310d721-254d7b2f10.zip/node_modules/chartjs-color/",\
+          "packageDependencies": [\
+            ["chartjs-color", "npm:2.4.1"],\
+            ["chartjs-color-string", "npm:0.6.0"],\
+            ["color-convert", "npm:1.9.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["chartjs-color-string", [\
+        ["npm:0.6.0", {\
+          "packageLocation": "./.yarn/cache/chartjs-color-string-npm-0.6.0-49eec5a83f-2355bc8e95.zip/node_modules/chartjs-color-string/",\
+          "packageDependencies": [\
+            ["chartjs-color-string", "npm:0.6.0"],\
+            ["color-name", "npm:1.1.4"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -6640,7 +6663,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["vue-chartjs", "virtual:0460f86c7587ee75dac643681550c044e8047ba46e219a5baac054fc0fea2d0af97a9bd3fe4b22de0884797215e0a1a4368bb60f9ef7087a69c4008789f4e032#npm:3.5.1"],\
             ["@types/chart.js", "npm:2.9.37"],\
-            ["chart.js", "npm:3.7.1"]\
+            ["chart.js", "npm:2.9.4"]\
           ],\
           "packagePeers": [\
             "chart.js"\

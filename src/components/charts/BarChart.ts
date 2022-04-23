@@ -1,12 +1,12 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import { Line, mixins } from 'vue-chartjs';
+import { Bar, mixins } from 'vue-chartjs';
 import { ChartData, ChartOptions } from 'chart.js';
 
 @Component({
-  extends: Line,
+  extends: Bar,
   mixins: [mixins.reactiveProp],
 })
-export default class LineChart extends Vue {
+export default class BarChart extends Vue {
   @Prop() chartData!: ChartData;
   @Prop() chartOptions?: ChartOptions;
 

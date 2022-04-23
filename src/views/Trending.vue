@@ -2,7 +2,7 @@
   <v-app>
     <v-card class="filter">
       <v-layout>
-        <v-card-title>Filters</v-card-title>
+        <v-card-title class="py-0">Filters</v-card-title>
         <v-card-actions>
           <v-btn icon color="primary" @click="isFilterOpen = !isFilterOpen">
             <v-icon>{{ isFilterOpen ? mdiMenuUp : mdiMenuDown }}</v-icon>
@@ -12,34 +12,42 @@
 
       <v-expand-transition>
         <v-card-text v-if="isFilterOpen" class="ma-0 py-0">
-          <v-switch v-model="war" label="War" class="pa-0 ma-0"></v-switch>
-          <v-switch v-model="protest" label="Protest" class="pa-0 ma-0"></v-switch>
+          <v-switch v-model="war" label="War" class="pa-0 ma-0" @click="protest = !protest"></v-switch>
+          <v-switch v-model="protest" label="Protest" class="pa-0 ma-0" @click="war = !war"></v-switch>
         </v-card-text>
       </v-expand-transition>
     </v-card>
 
     <gmaps-map ref="map" :options="mapOptions" @click="onMapClick">
-      <!-- <gmaps-marker :position="{ lat: -27, lng: 153 }"/> -->
-      <!-- <gmaps-info-window :options="{ position: { lat: -27, lng: 153 } }">
-        <p>Any <span style="background: yellow">HTML</span> can<br />go in <strong>these</strong>.</p>
-      </gmaps-info-window> -->
-      <gmaps-heatmap :items="datasets" :opacity="0.7" weight-prop="weight" />
+      <gmaps-heatmap
+        :items="
+          trendingDatasets.map((data) => {
+            return {
+              lat: data.lat,
+              lng: data.lng,
+              weight: war ? data.war.weight : data.protest.weight,
+            };
+          })
+        "
+        :opacity="0.7"
+        :radius="50"
+        weight-prop="weight"
+      />
     </gmaps-map>
 
     <v-dialog v-model="isDialogOpen" width="600" dark>
       <v-card>
-        <v-card-title class="text-h5">{{ datasets[selectedIndex].name }}</v-card-title>
+        <v-card-title class="text-h5">{{ trendingDatasets[selectedIndex].name }}</v-card-title>
 
         <v-card-text>
           <h3 class="mb-2">Articles</h3>
 
           <v-divider></v-divider>
 
-          <div v-for="(article, index) in datasets[selectedIndex].war.articles" :key="index">
-            <v-list-item two-line>
+          <div v-for="(article, index) in trendingDatasets[selectedIndex].war.articles" :key="index">
+            <v-list-item>
               <v-list-item-content @click="$router.push(article.articleURL)">
                 <v-list-item-title>{{ article.title }}</v-list-item-title>
-                <v-list-item-subtitle>{{ article.summary }}</v-list-item-subtitle>
               </v-list-item-content>
               <v-list-item-avatar rounded>
                 <v-img :src="article.imageURL"></v-img>
@@ -48,6 +56,10 @@
             <v-divider></v-divider>
           </div>
         </v-card-text>
+
+        <v-layout justify-end class="pb-2 pr-2">
+          <v-btn color="primary" text @click="$router.push('/articles')">More ...</v-btn>
+        </v-layout>
 
         <v-divider></v-divider>
 
@@ -64,18 +76,16 @@
 import { Component, Vue } from 'vue-property-decorator';
 import { gmapsMap, gmapsMarker, gmapsHeatmap, gmapsInfoWindow } from 'x5-gmaps';
 import { mdiMenuUp, mdiMenuDown } from '@mdi/js';
-import { datasets } from '@/store/dummyData';
+import { TrendingDataset, trendingDatasets } from '@/store/dummyData';
 
 @Component({ components: { gmapsMap, gmapsMarker, gmapsHeatmap, gmapsInfoWindow } })
 export default class Home extends Vue {
-  war: boolean = false;
-  protest: boolean = true;
+  war: boolean = true;
+  protest: boolean = false;
   isFilterOpen: boolean = false;
   mdiMenuUp: string = mdiMenuUp;
   mdiMenuDown: string = mdiMenuDown;
-
-  datasets: any = datasets;
-
+  trendingDatasets: TrendingDataset[] = trendingDatasets;
   isDialogOpen: boolean = false;
   selectedIndex: number = 0;
 
@@ -87,17 +97,20 @@ export default class Home extends Vue {
     rotateControl: false,
     scaleControl: false,
     streetViewControl: false,
+    zoomControl: false,
   };
 
   onMapClick(mapsMouseEvent: any) {
     const lat = mapsMouseEvent.latLng.toJSON().lat;
     const lng = mapsMouseEvent.latLng.toJSON().lng;
 
-    this.selectedIndex = datasets.findIndex((data) => {
-      if (Math.abs(data.lat - lat) <= 2 && Math.abs(data.lng - lng) <= 2) return true;
+    this.selectedIndex = trendingDatasets.findIndex((data) => {
+      if (Math.abs(data.lat - lat) <= 1.5 && Math.abs(data.lng - lng) <= 1.5) return true;
     });
 
-    this.isDialogOpen = true;
+    if (this.selectedIndex !== -1) {
+      this.isDialogOpen = true;
+    }
   }
 }
 </script>

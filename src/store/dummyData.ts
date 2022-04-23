@@ -6,45 +6,43 @@ export interface Article {
   imageURL: string;
 }
 
-export interface Dataset {
+export interface TrendingDataset {
   name: string;
   lat: number;
   lng: number;
-  war?: {
-    todayDeaths: number;
-    weeklyDeaths: number;
-    totalDeaths: number;
-    chartDatasets: ChartDataset[];
+  war: {
     articles: Article[];
+    weight: number;
   };
-  protest?: {
-    todayCasualties: number;
-    weeklyCasualties: number;
-    totalCasualties: number;
-    chartDatasets: ChartDataset[];
+  protest: {
+    weight: number;
   };
 }
 
-export const datasets: Dataset[] = [
+export interface WarDataset {
+  name: string;
+  todayDeaths: number;
+  weeklyDeaths: number;
+  totalDeaths: number;
+  labels: string[];
+  datasets: ChartDataset[];
+}
+
+export interface ProtestDataset {
+  name: string;
+  todayCasualties: number;
+  weeklyCasualties: number;
+  totalCasualties: number;
+  labels: string[];
+  datasets: ChartDataset[];
+}
+
+export const trendingDatasets: TrendingDataset[] = [
   {
     name: 'Kyiv city',
     lat: 50.423729,
     lng: 30.514446,
     war: {
-      todayDeaths: 1,
-      weeklyDeaths: 2,
-      totalDeaths: 3,
-      chartDatasets: [
-        {
-          label: 'test',
-          data: [],
-          fill: false,
-          borderColor: 'rgb(255, 99, 132)',
-          backgroundColor: 'rgb(255, 99, 132)',
-          borderWidth: 1,
-          pointRadius: 0.5,
-        },
-      ],
       articles: [
         {
           title: `Russia's offensive in the Donbas can't make up for its failure in Kyiv`,
@@ -71,22 +69,10 @@ export const datasets: Dataset[] = [
             'https://www.defensenews.com/resizer/TZZvvyaEIHEomdnfvw-8RLCyD_8=/1440x0/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/mco/OEAHEVC7CNBGLF3ZDHXRFPCVL4.jpg',
         },
       ],
+      weight: 7,
     },
     protest: {
-      todayCasualties: 1,
-      weeklyCasualties: 2,
-      totalCasualties: 3,
-      chartDatasets: [
-        {
-          label: 'test',
-          data: [],
-          fill: false,
-          borderColor: 'rgb(255, 99, 132)',
-          backgroundColor: 'rgb(255, 99, 132)',
-          borderWidth: 1,
-          pointRadius: 0.5,
-        },
-      ],
+      weight: 0,
     },
   },
   {
@@ -94,20 +80,6 @@ export const datasets: Dataset[] = [
     lat: 46.448736,
     lng: 30.71656,
     war: {
-      todayDeaths: 1,
-      weeklyDeaths: 2,
-      totalDeaths: 3,
-      chartDatasets: [
-        {
-          label: 'test',
-          data: [],
-          fill: false,
-          borderColor: 'rgb(255, 99, 132)',
-          backgroundColor: 'rgb(255, 99, 132)',
-          borderWidth: 1,
-          pointRadius: 0.5,
-        },
-      ],
       articles: [
         {
           title: `Ukraine Accuses Russia of War Crimes as Air Strikes Hit Odessa`,
@@ -131,22 +103,10 @@ export const datasets: Dataset[] = [
           imageURL: 'https://unherd.com/wp-content/uploads/2022/04/GettyImages-1239075763-copy-scaled-e1650384455658-1024x591.jpg',
         },
       ],
+      weight: 5,
     },
     protest: {
-      todayCasualties: 1,
-      weeklyCasualties: 2,
-      totalCasualties: 3,
-      chartDatasets: [
-        {
-          label: 'test',
-          data: [],
-          fill: false,
-          borderColor: 'rgb(255, 99, 132)',
-          backgroundColor: 'rgb(255, 99, 132)',
-          borderWidth: 1,
-          pointRadius: 0.5,
-        },
-      ],
+      weight: 0,
     },
   },
   {
@@ -154,20 +114,6 @@ export const datasets: Dataset[] = [
     lat: 46.760374,
     lng: 36.803977,
     war: {
-      todayDeaths: 1,
-      weeklyDeaths: 2,
-      totalDeaths: 3,
-      chartDatasets: [
-        {
-          label: 'test',
-          data: [],
-          fill: false,
-          borderColor: 'rgb(255, 99, 132)',
-          backgroundColor: 'rgb(255, 99, 132)',
-          borderWidth: 1,
-          pointRadius: 0.5,
-        },
-      ],
       articles: [
         {
           title: `Berdyansk: Life Under Russian Occupation`,
@@ -187,28 +133,16 @@ export const datasets: Dataset[] = [
           imageURL: 'https://www1.cbn.com/sites/default/files/styles/image_xl_640x480/public/wgr1033ukraine04_si.jpg?itok=OOFAmJgR',
         },
         {
-          title: `Ukraine pushes back on ‘numerous’ Russian advances in Donbas; Zelenskyy warns Mariupol situation is severe`,
+          title: `Ukraine pushes back on 'numerous' Russian advances in Donbas; Zelenskyy warns Mariupol situation is severe`,
           articleURL: 'https://www.cnbc.com/2022/04/19/russia-ukraine-live-updates.html',
           imageURL:
             'https://image.cnbcfm.com/api/v1/image/107048722-1650420754816-gettyimages-1240061479-RUSSIA-UKRAINE_CONFLICT.jpeg?v=1650420548&w=740&h=416&ffmt=webp',
         },
       ],
+      weight: 4,
     },
     protest: {
-      todayCasualties: 1,
-      weeklyCasualties: 2,
-      totalCasualties: 3,
-      chartDatasets: [
-        {
-          label: 'test',
-          data: [],
-          fill: false,
-          borderColor: 'rgb(255, 99, 132)',
-          backgroundColor: 'rgb(255, 99, 132)',
-          borderWidth: 1,
-          pointRadius: 0.5,
-        },
-      ],
+      weight: 0,
     },
   },
   {
@@ -216,23 +150,9 @@ export const datasets: Dataset[] = [
     lat: 48.900567,
     lng: 38.444467,
     war: {
-      todayDeaths: 1,
-      weeklyDeaths: 2,
-      totalDeaths: 3,
-      chartDatasets: [
-        {
-          label: 'test',
-          data: [],
-          fill: false,
-          borderColor: 'rgb(255, 99, 132)',
-          backgroundColor: 'rgb(255, 99, 132)',
-          borderWidth: 1,
-          pointRadius: 0.5,
-        },
-      ],
       articles: [
         {
-          title: `Russia-Ukraine War News Highlights: Russia plans to seize land, destroy Ukraine’s armed forces says Defence Ministry`,
+          title: `Russia-Ukraine War News Highlights: Russia plans to seize land, destroy Ukraine's armed forces says Defence Ministry`,
           articleURL: 'https://indianexpress.com/article/world/russia-ukraine-war-live-updates-kyiv-mariupol-moscow-bucha-7872987/',
           imageURL: 'https://images.indianexpress.com/2022/04/ukraine-aztol.jpg',
         },
@@ -249,27 +169,15 @@ export const datasets: Dataset[] = [
             'https://www.reuters.com/resizer/6v3OZX6OBVFAWI9k5JZFhSfFNVo=/960x0/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/SNVB7EFXAJMSBBQ2MYMTWOVOE4.jpg',
         },
         {
-          title: `Live Updates | Celebrity chef’s kitchen bombed in Kharkiv`,
+          title: `Live Updates | Celebrity chef's kitchen bombed in Kharkiv`,
           articleURL: 'https://apnews.com/article/russia-ukraine-kyiv-business-europe-religion-9b10ce4f2cfe5bdeed5658fe45373e54',
           imageURL: 'https://storage.googleapis.com/afs-prod/media/52af4e903f8a4154a561d53160af06f8/1000.jpeg',
         },
       ],
+      weight: 3,
     },
     protest: {
-      todayCasualties: 1,
-      weeklyCasualties: 2,
-      totalCasualties: 3,
-      chartDatasets: [
-        {
-          label: 'test',
-          data: [],
-          fill: false,
-          borderColor: 'rgb(255, 99, 132)',
-          backgroundColor: 'rgb(255, 99, 132)',
-          borderWidth: 1,
-          pointRadius: 0.5,
-        },
-      ],
+      weight: 0,
     },
   },
   {
@@ -277,20 +185,6 @@ export const datasets: Dataset[] = [
     lat: 45.351738,
     lng: 28.839387,
     war: {
-      todayDeaths: 1,
-      weeklyDeaths: 2,
-      totalDeaths: 3,
-      chartDatasets: [
-        {
-          label: 'test',
-          data: [],
-          fill: false,
-          borderColor: 'rgb(255, 99, 132)',
-          backgroundColor: 'rgb(255, 99, 132)',
-          borderWidth: 1,
-          pointRadius: 0.5,
-        },
-      ],
       articles: [
         {
           title: `Ukraine to seize Russian ships undergoing rehaul in Izmail`,
@@ -309,27 +203,74 @@ export const datasets: Dataset[] = [
           imageURL: 'https://static.india.com/wp-content/uploads/2022/04/hypersonic-22.jpg?impolicy=Medium_Widthonly&w=700&h=467',
         },
         {
-          title: `Biden appears to accuse Putin of ‘genocide’ in Ukraine`,
+          title: `Biden appears to accuse Putin of ‘genocide' in Ukraine`,
           articleURL: 'https://www.freemalaysiatoday.com/category/world/2022/04/13/biden-appears-to-accuse-putin-of-genocide-in-ukraine/',
           imageURL: 'https://s3media.freemalaysiatoday.com/wp-content/uploads/2022/04/AP22102620955450.jpg',
         },
       ],
+      weight: 2,
     },
     protest: {
-      todayCasualties: 1,
-      weeklyCasualties: 2,
-      totalCasualties: 3,
-      chartDatasets: [
-        {
-          label: 'test',
-          data: [],
-          fill: false,
-          borderColor: 'rgb(255, 99, 132)',
-          backgroundColor: 'rgb(255, 99, 132)',
-          borderWidth: 1,
-          pointRadius: 0.5,
-        },
-      ],
+      weight: 0,
     },
+  },
+  {
+    name: 'Seoul',
+    lat: 37.5666805,
+    lng: 126.9784147,
+    war: {
+      articles: [],
+      weight: 0,
+    },
+    protest: {
+      weight: 100,
+    },
+  },
+];
+
+export const warDatasets: WarDataset[] = [
+  {
+    name: 'Ukraine',
+    todayDeaths: 1,
+    weeklyDeaths: 2,
+    totalDeaths: 3,
+    labels: ['2022-03-03', '2022-03-17', '2022-03-24', '2022-03-25', '2022-04-12', '2022-04-18'],
+    datasets: [
+      {
+        label: 'Total Deaths',
+        data: [2000, 13500, 15000, 16000, 20000, 26000],
+        fill: true,
+        borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgba(255, 99, 132, 0.1)',
+        borderWidth: 4,
+        pointRadius: 3,
+      },
+    ],
+  },
+];
+
+export const protestDatasets: ProtestDataset[] = [
+  {
+    name: 'Seoul',
+    todayCasualties: 1,
+    weeklyCasualties: 2,
+    totalCasualties: 3,
+    labels: [
+      '2022-04-19 Hyoja-dong',
+      '2022-04-20 Yeouido-dong',
+      '2022-04-21 Sincheon-dong',
+      '2022-04-22 Dunchon-dong',
+      '2022-04-23 Yeouido-dong',
+      '2022-04-24 Sanggye-dong',
+      '2022-04-25 Euljiro 6-ga',
+    ],
+    datasets: [
+      {
+        data: [1000, 1500, 1500, 299, 3000, 299, 701],
+        borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        borderWidth: 1,
+      },
+    ],
   },
 ];

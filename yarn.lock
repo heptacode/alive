@@ -1788,7 +1788,7 @@ __metadata:
     "@types/node": latest
     "@vue/runtime-dom": latest
     axios: latest
-    chart.js: latest
+    chart.js: ^2.9.4
     prettier: latest
     sass: ~1.32.13
     typescript: latest
@@ -1797,7 +1797,7 @@ __metadata:
     vite-plugin-pwa: latest
     vite-plugin-vue2: latest
     vue: legacy
-    vue-chartjs: 3.5.1
+    vue-chartjs: ^3.5.1
     vue-class-component: latest
     vue-property-decorator: latest
     vue-router: ^3.5.2
@@ -2049,10 +2049,32 @@ axios@latest:
   languageName: node
   linkType: hard
 
-"chart.js@npm:latest":
-  version: 3.7.1
-  resolution: "chart.js@npm:3.7.1"
-  checksum: f9d118d3b7dd3c36b6da7a8d71ac9e5d9673b81095cc66c3f61ff91674e20020c6700f8c9c6f93713fa8474eb471ded106114346ccc6afa88b4a7d0eb73dcea4
+"chart.js@npm:^2.9.4":
+  version: 2.9.4
+  resolution: "chart.js@npm:2.9.4"
+  dependencies:
+    chartjs-color: ^2.1.0
+    moment: ^2.10.2
+  checksum: cbdc7abe2fa65e4838848e68b035ae6048ebcc512b9057d7cdb6d361e728400d39e3fde75e0b4da815ab43f7890c31787d8f80d4e6ab75a3e80fc75b47cd173c
+  languageName: node
+  linkType: hard
+
+"chartjs-color-string@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "chartjs-color-string@npm:0.6.0"
+  dependencies:
+    color-name: ^1.0.0
+  checksum: 2355bc8e9514b779d0dc057c5ee6707e8166f270531c27287a399d6bfeb0d891b00a6f6c20e764453a062de0de8b298b11d3850fc94c323df66efb4720ece4c7
+  languageName: node
+  linkType: hard
+
+"chartjs-color@npm:^2.1.0":
+  version: 2.4.1
+  resolution: "chartjs-color@npm:2.4.1"
+  dependencies:
+    chartjs-color-string: ^0.6.0
+    color-convert: ^1.9.3
+  checksum: 254d7b2f103980417703331c49fba18877ac797fd9056d79f0d566dc4fd8d41f91b7f63d4b19602462b91110bee2fe0c9fd57266ce871e498ac1c25742fffb11
   languageName: node
   linkType: hard
 
@@ -2089,7 +2111,7 @@ axios@latest:
   languageName: node
   linkType: hard
 
-"color-convert@npm:^1.9.0":
+"color-convert@npm:^1.9.0, color-convert@npm:^1.9.3":
   version: 1.9.3
   resolution: "color-convert@npm:1.9.3"
   dependencies:
@@ -2114,7 +2136,7 @@ axios@latest:
   languageName: node
   linkType: hard
 
-"color-name@npm:~1.1.4":
+"color-name@npm:^1.0.0, color-name@npm:~1.1.4":
   version: 1.1.4
   resolution: "color-name@npm:1.1.4"
   checksum: b0445859521eb4021cd0fb0cc1a75cecf67fceecae89b63f62b201cca8d345baf8b952c966862a9d9a2632987d4f6581f0ec8d957dfacece86f0a7919316f610
@@ -4603,7 +4625,7 @@ vite@latest:
   languageName: node
   linkType: hard
 
-"vue-chartjs@npm:3.5.1":
+"vue-chartjs@npm:^3.5.1":
   version: 3.5.1
   resolution: "vue-chartjs@npm:3.5.1"
   dependencies:

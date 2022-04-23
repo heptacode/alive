@@ -8,9 +8,9 @@
   },
   "dependencies": {
     "axios": "latest",
-    "chart.js": "latest",
+    "chart.js": "^2.9.4",
     "vue": "legacy",
-    "vue-chartjs": "3.5.1",
+    "vue-chartjs": "^3.5.1",
     "vue-class-component": "latest",
     "vue-property-decorator": "latest",
     "vue-router": "^3.5.2",

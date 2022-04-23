@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
 import Trending from '@/views/Trending.vue';
-import News from '@/views/News.vue';
+import Articles from '@/views/Articles.vue';
 import War from '@/views/War.vue';
 import Protest from '@/views/Protest.vue';
 
@@ -17,9 +17,9 @@ const routes: Array<RouteConfig> = [
     meta: { icon: mdiTrendingUp },
   },
   {
-    path: '/news',
-    name: 'News',
-    component: News,
+    path: '/articles',
+    name: 'Articles',
+    component: Articles,
     meta: { icon: mdiNewspaperVariantOutline },
   },
   {
