@@ -35,7 +35,7 @@
       />
     </gmaps-map>
 
-    <v-dialog v-model="isDialogOpen" width="600" dark>
+    <v-dialog v-model="isDialogOpen" width="600">
       <v-card>
         <v-card-title class="text-h5">{{ trendingDatasets[selectedIndex].name }}</v-card-title>
 
