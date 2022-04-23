@@ -46,7 +46,7 @@
 
           <div v-for="(article, index) in trendingDatasets[selectedIndex].war.articles" :key="index">
             <v-list-item>
-              <v-list-item-content @click="$router.push(article.articleURL)">
+              <v-list-item-content @click="openArticle(article.articleURL)">
                 <v-list-item-title>{{ article.title }}</v-list-item-title>
               </v-list-item-content>
               <v-list-item-avatar rounded>
@@ -111,6 +111,10 @@ export default class Home extends Vue {
     if (this.selectedIndex !== -1) {
       this.isDialogOpen = true;
     }
+  }
+
+  openArticle(articleURL: string) {
+    window.open(articleURL);
   }
 }
 </script>
