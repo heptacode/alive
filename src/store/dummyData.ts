@@ -231,9 +231,9 @@ export const trendingDatasets: TrendingDataset[] = [
 export const warDatasets: WarDataset[] = [
   {
     name: 'Ukraine',
-    todayDeaths: 1,
-    weeklyDeaths: 2,
-    totalDeaths: 3,
+    todayDeaths: 0,
+    weeklyDeaths: 6000,
+    totalDeaths: 26000,
     labels: ['2022-03-03', '2022-03-17', '2022-03-24', '2022-03-25', '2022-04-12', '2022-04-18'],
     datasets: [
       {
@@ -252,9 +252,9 @@ export const warDatasets: WarDataset[] = [
 export const protestDatasets: ProtestDataset[] = [
   {
     name: 'Seoul',
-    todayCasualties: 1,
-    weeklyCasualties: 2,
-    totalCasualties: 3,
+    todayCasualties: 0,
+    weeklyCasualties: 0,
+    totalCasualties: 0,
     labels: [
       '2022-04-19 Hyoja-dong',
       '2022-04-20 Yeouido-dong',
