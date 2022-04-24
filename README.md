@@ -8,10 +8,8 @@
 - TypeScript
 - Vite
 - Vue 2
-- Vuex
 - SCSS
 - Vuetify 2
-- PWA
 
 ## Installation
 
