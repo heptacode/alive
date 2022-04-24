@@ -1,12 +1,15 @@
-# App ⚡
+# Alive ⚡️
 
-> SKCS Hackathon
+### SKCS Hackathon Project
+
+> Just as the COVID-19 QR code was made available to all Koreans on KakaoTalk, which is used by all Koreans,
+> we thought that if we put the progress of the war, the damage, and the articles of the protests and the protests on social media that people around the world are actively using, we could get people to pay more attention to the protests and wars.
 
 ## Tech Stack
 
 - Yarn Berry
-- TypeScript
 - Vite
+- TypeScript
 - Vue 2
 - SCSS
 - Vuetify 2
@@ -31,4 +34,4 @@
 
 ## Issues
 
-- [Issues](https://github.com/skcs-hackathon/app/issues)
+- [Issues](https://github.com/skcs-hackathon/alive/issues)
