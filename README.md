@@ -2,8 +2,7 @@
 
 ### SKCS Hackathon Project
 
-> Just as the COVID-19 QR code was made available to all Koreans on KakaoTalk, which is used by all Koreans,
-> we thought that if we put the progress of the war, the damage, and the articles of the protests and the protests on social media that people around the world are actively using, we could get people to pay more attention to the protests and wars.
+> The topic of this hackathon was corporate social responsibility. Just as the COVID-19 QR code was made available to all Koreans on KakaoTalk, we thought people could get information regarding the progress of the war, protests, and articles immediately on social media.
 
 ## Tech Stack
 
