@@ -6,12 +6,12 @@
 
 ## Tech Stack
 
-- Yarn Berry
-- Vite
-- TypeScript
-- Vue 2
-- SCSS
-- Vuetify 2
+![Yarn Berry](https://img.shields.io/badge/Yarn_Berry-282C34.svg?&style=for-the-badge&logo=yarn)
+![Vite](https://img.shields.io/badge/vite-282C34.svg?&style=for-the-badge&logo=vite)
+![TypeScript](https://img.shields.io/badge/TypeScript-282C34.svg?&style=for-the-badge&logo=typescript)
+![Vue](https://img.shields.io/badge/vue-282C34.svg?&style=for-the-badge&logo=vue.js)
+![Vuetify](https://img.shields.io/badge/Vuetify-282C34.svg?&style=for-the-badge&logo=vuetify&logoColor=AEDDFF)
+![SCSS](https://img.shields.io/badge/SCSS-282C34.svg?&style=for-the-badge&logo=sass)
 
 ## Installation
 
