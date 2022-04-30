@@ -1,8 +1,16 @@
+<div align="center">
+
+![Alive](public/logo_128.png)
+
 # Alive ⚡️
+
+</div>
 
 ### SKCS Hackathon Project
 
 > The topic of this hackathon was corporate social responsibility. Just as the COVID-19 QR code was made available to all Koreans on KakaoTalk, we thought that if the progress of the war, damage, and protest or protest articles were included on social media, people could be more interested in protests or wars. Based on the number of articles and keywords that come up in real time, we created a heat map that intensifies the dots on the map, and visualized the number of casualties caused by war and demonstrations so that information can be easily obtained.
+
+![Alive](docs/alive-screenshot.png)
 
 ## Tech Stack
 
@@ -31,6 +39,7 @@
 
 - `yarn build`
 
-## Issues
+## Contributing
 
-- [Issues](https://github.com/skcs-hackathon/alive/issues)
+- [Issues](https://github.com/heptacode/alive/issues)
+- [Fork](https://github.com/heptacode/alive/fork)
