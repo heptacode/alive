@@ -3,8 +3,8 @@
     "ms-vsliveshare.vsliveshare",
     "christian-kohler.npm-intellisense",
     "esbenp.prettier-vscode",
-    "johnsoncodehk.volar",
-    "johnsoncodehk.vscode-typescript-vue-plugin",
+    "vue.volar",
+    "vue.vscode-typescript-vue-plugin",
     "arcanis.vscode-zipfs",
     "wayou.vscode-todo-highlight"
   ]
