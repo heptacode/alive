@@ -10,9 +10,13 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
+import useRegisterSW from '@/mixins/useRegisterSW';
 import Sidebar from '@/components/Sidebar.vue';
 
-@Component({ components: { Sidebar } })
+@Component({
+  components: { Sidebar },
+  mixins: [useRegisterSW],
+})
 export default class App extends Vue {}
 </script>
 
