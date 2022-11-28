@@ -8,7 +8,7 @@ import x5GMaps from 'x5-gmaps';
 Vue.config.productionTip = false;
 
 Vue.use(x5GMaps, {
-  key: 'AIzaSyBBGdySgTvDkEKMZaM5udB_rGP4jct-w60',
+  key: import.meta.env.NODE_ENV !== 'production' ? import.meta.env.VITE_APP_LOCAL_GOOGLE_KEY : 'AIzaSyBBGdySgTvDkEKMZaM5udB_rGP4jct-w60',
   libraries: ['visualization'],
 });
 
